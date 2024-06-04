@@ -1,38 +1,124 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(229, 236, 252);
+  min-height: 100vh;
+  font-family: Helvetica;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  grid-area: header;
+  padding: 1em;
+  height: 125px;
+  box-shadow: 0px 0px 7px rgb(201, 201, 201);
+  font-family: Helvetica;
+}
+
+.Page {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 15px;
+  padding: 60px;
+  background-color: white;
+  height: 1000px;
+  width: 1000px;
+  box-shadow: 0px 0px 25px rgb(201, 201, 201);
+}
+
+.pointerStart {
+  width: 190px;
+  height: 60px;
+  position: relative;
+  background: rgb(255, 101, 155);
+  margin: 10px;
+  margin-right: 10px;
+  padding-left: 20px;
+  align-content: center;
   color: white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.pointerStart:before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid rgb(255, 101, 155);
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.progressBar {
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  margin-right: 10px;
+}
+
+div.countdown {
+  align-self: flex-start;
+}
+
+.css-button {
+  color: #404040;
+	font-size: 16px;
+  font-weight: 600;
+	border-radius: 5px;
+  border-width: 0px;
+	padding: 10px 10px;
+	text-shadow: 1px 1px 0px #ffffff;
+	box-shadow: inset 1px 1px 2px 0px #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	font-family: Helvetica;
+  background-color: #e3e3e3;
+	display: inline-block;
+	vertical-align: middle;
+  margin-right: 10px;
+}
+
+.css-button-text {
+	position: relative;
+	display: inline-block;
+  font-family: Helvetica;
+}
+
+.addStep {
+  height: 40px;
+  color: #404040;
+	font-size: 16px;
+  font-weight: 600;
+	border-radius: 5px;
+  border-width: 0px;
+	padding: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	font-family: Helvetica;
+  background-color: #eaeaea;
+	display: inline-block;
+	vertical-align: middle;
+  margin-left: 30px;
+  margin-top: 7px;
+}
+
+.header-title-input {
+  font-size: 40px;
+  font-weight: bold;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: Helvetica;
 }

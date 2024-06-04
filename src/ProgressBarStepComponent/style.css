@@ -1,0 +1,110 @@
+  div.pointer {
+    width: 180px;
+    height: 60px;
+    position: relative;
+    background: rgb(255, 101, 155);
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    align-content: center;
+    color: white;
+}
+
+.pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid rgb(255, 255, 255);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+.pointer:before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 30px solid rgb(255, 101, 155);
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+.pointerStart {
+    padding-left: 20px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+/* .pointerStart {
+  width: 190px;
+  height: 60px;
+  position: relative;
+  background: rgb(255, 101, 155);
+  margin: 10px;
+  margin-right: 10px;
+  padding-left: 20px;
+  align-content: center;
+  color: white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 100;
+}
+
+.pointerStart:before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid rgb(255, 101, 155);
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+} */
+
+div.progressBar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-right: 10px;
+}
+
+.addStep {
+  height: 40px;
+  color: #404040;    
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  border-width: 0px;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial;
+  background-color: #eaeaea;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  margin-top: 7px;
+}
+
+.editingStep {
+  width: 180px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 101, 155);
+  /* font-family: Arial; */
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  border-width: 0px;
+  color: white;
+}
